@@ -30,4 +30,3 @@ Route::get('/detail/{id}',  [VPNController::class, "detailVpn"]);
 Route::get('/detail/random',  [VPNController::class, "randomVpn"]);
 
 Route::get('/animal-sound',[\App\Http\Controllers\api\AnimalAppController::class,'getSoundList']);
-a
