@@ -30,3 +30,30 @@ Route::get('/detail/{id}',  [VPNController::class, "detailVpn"]);
 Route::get('/detail/random',  [VPNController::class, "randomVpn"]);
 
 Route::get('/animal-sound',[\App\Http\Controllers\api\AnimalAppController::class,'getSoundList']);
+
+
+Route::post('/testAppDetails',function(){
+    return response()->json(json_decode('{
+    "channels": {
+        "facebook":{
+            "banner": "IMG_16_9_APP_INSTALL#2312433698835503_2964944860251047",
+            "native": "IMG_16_9_APP_INSTALL#2312433698835503_2964952163583650",
+            "interstitial": "IMG_16_9_APP_INSTALL#2312433698835503_2650502525028617",
+            "rewarded": "",
+            "native_banner": "IMG_16_9_APP_INSTALL#2312433698835503_2964953543583512"
+        },
+        "admob_id":{
+            "banner": "",
+            "native": "",
+            "interstitial": "",
+            "rewarded": "",
+            "native_banner": ""
+        }
+    },
+    "config": {
+        "list_repeat_count": 3,
+        "display": true
+    }
+}
+',1));
+});
