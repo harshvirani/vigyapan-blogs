@@ -52,7 +52,8 @@ Route::post('/testAppDetails',function(){
     },
     "config": {
         "list_repeat_count": 3,
-        "display": true
+        "display": true,
+        "interstitial_show_click_count":2
     }
 }
 ',1));
