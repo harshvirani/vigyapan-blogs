@@ -50,6 +50,10 @@ Route::post('/testAppDetails',function(){
             "native_banner": ""
         }
     },
+    "other": {
+        "privacy_policy":"https://dksolution104.blogspot.com/2022/08/privacypolicy.html",
+        "tnc":"https://dksolution104.blogspot.com/2022/08/privacypolicy.html"
+    },
     "config": {
         "list_repeat_count": 3,
         "display": true,
