@@ -32,7 +32,7 @@ Route::get('/detail/random',  [VPNController::class, "randomVpn"]);
 Route::get('/animal-sound',[\App\Http\Controllers\api\AnimalAppController::class,'getSoundList']);
 
 
-Route::post('/testAppDetails',function(){
+Route::middleware('request-track')->post('/testAppDetails',function(){
     return response()->json(json_decode('{
     "channels": {
         "facebook":{
@@ -61,4 +61,4 @@ Route::post('/testAppDetails',function(){
     }
 }
 ',1));
-});
+});//
