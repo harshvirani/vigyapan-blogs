@@ -18,7 +18,8 @@ class RequestTrack
     {
         $ipAddress = $request->ip();
         \Log::info("IP ADDRESS====".$ipAddress);
-//        \Log::info("PATH====".$request->route());
+        \Log::info("PATH====".$request->getPathInfo());
+        \Log::info("PATH====".json_encode($request->all()));
         return $next($request);
     }
 }
