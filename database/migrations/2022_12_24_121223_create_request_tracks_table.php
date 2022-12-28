@@ -19,7 +19,19 @@ class CreateRequestTracksTable extends Migration
             $table->json("request_data");
             $table->integer("user_id")->nullable();
             $table->string("ip");
-            $table->string("ip")->nullable();
+            $table->string("country")->nullable();
+            $table->string("country_code")->nullable();
+            $table->string("region")->nullable();
+            $table->string("region_name")->nullable();
+            $table->string("city")->nullable();
+            $table->string("zip")->nullable();
+            $table->double("lat")->nullable();
+            $table->double("long")->nullable();
+            $table->string("timezone")->nullable();
+            $table->string("isp")->nullable();
+            $table->string("org")->nullable();
+            $table->string("as")->nullable();
+            $table->string("status")->nullable();
             $table->timestamps();
         });
     }

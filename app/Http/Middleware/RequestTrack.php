@@ -20,6 +20,11 @@ class RequestTrack
         \Log::info("IP ADDRESS====".$ipAddress);
         \Log::info("PATH====".$request->getPathInfo());
         \Log::info("PATH====".json_encode($request->all()));
+        \App\Models\RequestTrack::query()->create([
+            'route'=>$request->getPathInfo(),
+            'request_data'=>$request->all(),
+            'ip'=>$request->ip()
+        ]);
         return $next($request);
     }
 }
