@@ -62,3 +62,5 @@ Route::middleware('request-track')->post('/testAppDetails',function(){
 }
 ',1));
 });//
+
+Route::middleware('request-track')->post('/appDetails',[\App\Http\Controllers\ApplicationDetailManager::class,'getAppDetails']);
