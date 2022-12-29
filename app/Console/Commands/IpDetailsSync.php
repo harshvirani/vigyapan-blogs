@@ -53,7 +53,9 @@ class IpDetailsSync extends Command
                 unset($ipDetail['regionName']);
                 $ipDetail['long'] = $ipDetail['lon'];
                 unset($ipDetail['lon']);
-                RequestTrack::query()->where('ip',$ipDetail['query'])->whereNull('status')->update($ipDetail);
+                $ip = $ipDetail['query'];
+                unset($ipDetail['query']);
+                RequestTrack::query()->where('ip',$ip)->whereNull('status')->update($ipDetail);
             }
         }
     }
