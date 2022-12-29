@@ -48,7 +48,9 @@ class IpDetailsSync extends Command
                 RequestTrack::query()->where('ip',$ipDetail['query'])->whereNull('status')->update(['status'=>'fail =>'.$ipDetail['message']]);
             }else{
                 $ipDetail['country_code'] = $ipDetail['countryCode'];
+                unset($ipDetail['countryCode']);
                 $ipDetail['region_name'] = $ipDetail['regionName'];
+                unset($ipDetail['regionName']);
                 RequestTrack::query()->where('ip',$ipDetail['query'])->whereNull('status')->update($ipDetail);
             }
         }
