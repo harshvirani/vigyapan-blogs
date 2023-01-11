@@ -31,10 +31,15 @@ Route::get('/detail/random',  [VPNController::class, "randomVpn"]);
 
 Route::get('/animal-sound',[\App\Http\Controllers\api\AnimalAppController::class,'getSoundList']);
 
+Route::get('gstin/{gstin}',[\App\Http\Controllers\GstinController::class,'getGstDetails']);
 
 Route::middleware('request-track')->post('/testAppDetails',function(){
     return response()->json(json_decode('{
     "channels": {
+        "qureka": {
+            "id": "849.set.qureka.com",
+            "is_enabled": true
+        },
         "facebook":{
             "banner": "IMG_16_9_APP_INSTALL#2312433698835503_2964944860251047",
             "native": "IMG_16_9_APP_INSTALL#2312433698835503_2964952163583650",
