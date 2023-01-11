@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class GstinController extends Controller
 {
     public function getGstDetails(string $gstin){
+        //Scrapped from : https://www.mastersindia.co/gst-number-search-and-gstin-verification/
         $details = \Illuminate\Support\Facades\Http::withHeaders(array(
             'authority' => 'blog-backend.mastersindia.co',
             'accept' => 'application/json, text/plain, */*',
